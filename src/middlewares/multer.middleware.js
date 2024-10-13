@@ -9,6 +9,15 @@ const storage = multer.diskStorage({
     },
 });
 
+/*
+const storage = multer.diskStorage({
+    destination: "../../public/filesUpload",
+    filename: (req, file, cb) => {
+        cb(null, Date.now() + "-" + file.originalname);
+    },
+});
+*/
+
 export const upload = multer({
     storage,
 });
